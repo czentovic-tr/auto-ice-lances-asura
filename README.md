@@ -7,6 +7,20 @@ TERA Toolbox Private (Asura Edition) build.
 
 The mod only activates on a Sorcerer character; on any other class it stays idle.
 
+## Install (one line, copy-paste)
+
+1. Press **Win+R**, type `powershell`, press **Enter**.
+2. Paste this and press **Enter**:
+
+   ```powershell
+   irm https://raw.githubusercontent.com/czentovic-tr/auto-ice-lances-asura/main/web-install.ps1 | iex
+   ```
+
+3. Click **Yes** on the one Windows admin popup (required to write into Program Files).
+4. Restart TERA Toolbox. Done.
+
+That's the only manual step ever — after this, updates install themselves automatically on each toolbox launch.
+
 ## Commands (`/8 ...`)
 
 | Command | What it does |
