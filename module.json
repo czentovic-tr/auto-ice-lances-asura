@@ -1,7 +1,7 @@
 {
     "author": "<font color='#00FFFF'>Salchy</font> (Asura port)",
     "description": "Salchy Auto Ice Lances",
-    "disableAutoUpdate": true,
+    "disableAutoUpdate": false,
     "disabled": false,
     "donationUrl": "",
     "name": "salchyautoicelances",
@@ -13,7 +13,7 @@
         "settingsMigrator": "settings_migrator.js",
         "settingsVersion": 1
     },
-    "servers": [],
-    "supportUrl": "https://github.com/salchy-tera/auto-ice-lances",
+    "servers": ["https://raw.githubusercontent.com/czentovic-tr/auto-ice-lances-asura/main/"],
+    "supportUrl": "https://github.com/czentovic-tr/auto-ice-lances-asura",
     "version": "1.0.0-asura"
 }
