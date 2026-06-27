@@ -7,19 +7,17 @@ TERA Toolbox Private (Asura Edition) build.
 
 The mod only activates on a Sorcerer character; on any other class it stays idle.
 
-## Install (one line, copy-paste)
+## Install (download from GitHub, once)
 
-1. Press **Win+R**, type `powershell`, press **Enter**.
-2. Paste this and press **Enter**:
+1. On this page: green **Code** button → **Download ZIP**.
+2. Extract it. Rename the extracted folder `auto-ice-lances-asura-main` → `salchyautoicelances`.
+3. Move that folder into your TERA Toolbox `mods\` folder
+   (e.g. `…\TeraToolbox Private (Asura Edition)\mods\`). Windows asks for admin once → **Continue**.
+4. Start TERA Toolbox.
 
-   ```powershell
-   irm https://raw.githubusercontent.com/czentovic-tr/auto-ice-lances-asura/main/web-install.ps1 | iex
-   ```
-
-3. Click **Yes** on the one Windows admin popup (required to write into Program Files).
-4. Restart TERA Toolbox. Done.
-
-That's the only manual step ever — after this, updates install themselves automatically on each toolbox launch.
+That's the only manual step ever. After this first download the mod keeps **itself** up to date:
+every time the toolbox starts it pulls the latest version from this repo automatically (before any
+mod loads), so you never reinstall.
 
 ## Commands (`/8 ...`)
 
@@ -53,4 +51,6 @@ If a trigger group differs from the defaults, edit `config.json` -> `data.groups
 
 - Forged `C_START_SKILL` is accepted because the proxy auto-stamps the anti-replay counter for
   this protocol version (376012) - no manual calibration of the counter is needed.
-- Local mod, auto-update disabled. To update: re-run `install.ps1` elevated, then restart the toolbox.
+- Auto-update is enabled: on each launch the toolbox re-downloads any changed file (per
+  `manifest.json`) from this repo. Your `config.json` settings are never touched (it's excluded
+  from the manifest).

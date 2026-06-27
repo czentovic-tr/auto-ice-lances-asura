@@ -1,2 +1,3 @@
-install.log
 *.log
+install.ps1
+web-install.ps1
