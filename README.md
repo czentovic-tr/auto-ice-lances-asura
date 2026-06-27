@@ -10,10 +10,14 @@ The mod only activates on a Sorcerer character; on any other class it stays idle
 ## Install (download from GitHub, once)
 
 1. On this page: green **Code** button → **Download ZIP**.
-2. Extract it. Rename the extracted folder `auto-ice-lances-asura-main` → `salchyautoicelances`.
+2. Extract it (you get a folder named `auto-ice-lances-asura-main`).
 3. Move that folder into your TERA Toolbox `mods\` folder
    (e.g. `…\TeraToolbox Private (Asura Edition)\mods\`). Windows asks for admin once → **Continue**.
 4. Start TERA Toolbox.
+
+The folder name doesn't matter — the toolbox identifies the mod by the `name` in `module.json`,
+so you can leave it as `auto-ice-lances-asura-main` or rename it to `salchyautoicelances`. Just
+don't keep two copies of it in `mods\`.
 
 That's the only manual step ever. After this first download the mod keeps **itself** up to date:
 every time the toolbox starts it pulls the latest version from this repo automatically (before any
