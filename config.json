@@ -1,0 +1,30 @@
+{
+    "version": 1,
+    "data": {
+        "enabled": false,
+        "nova": true,
+        "fireblast": true,
+        "arcane": true,
+        "hailstorm": false,
+        "fusion": true,
+        "distance": 1000,
+        "humanize": false,
+        "jitterMin": 30,
+        "jitterMax": 150,
+        "iceLanceId": 350100,
+        "sorcJob": 4,
+        "groups": {
+            "4": "arcane",
+            "6": "fireblast",
+            "27": "hailstorm",
+            "30": "nova",
+            "32": "fireblast",
+            "33": "arcane",
+            "36": "fusion"
+        },
+        "instanceGroups": {
+            "33": "arcane",
+            "36": "fusion"
+        }
+    }
+}
