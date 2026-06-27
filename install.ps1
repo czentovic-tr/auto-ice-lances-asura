@@ -7,10 +7,18 @@ $dest = 'C:\Program Files (x86)\TeraToolbox Private (Asura Edition)\mods\salchya
 Write-Host "Installing salchyautoicelances -> $dest"
 New-Item -ItemType Directory -Path $dest -Force | Out-Null
 
-# Copy mod files (everything except this installer and any logs)
+# Copy mod files. Skip the installer, logs, and dev-only files. Never overwrite an existing
+# config.json (it holds the user's in-game settings).
+$skip = @('install.ps1', '.gitattributes', '.gitignore')
 Get-ChildItem -Path $PSScriptRoot -File |
-    Where-Object { $_.Name -ne 'install.ps1' -and $_.Extension -ne '.log' } |
-    ForEach-Object { Copy-Item $_.FullName -Destination $dest -Force }
+    Where-Object { $_.Name -notin $skip -and $_.Extension -ne '.log' } |
+    ForEach-Object {
+        if ($_.Name -eq 'config.json' -and (Test-Path (Join-Path $dest 'config.json'))) {
+            Write-Host "kept existing config.json (settings preserved)"
+        } else {
+            Copy-Item $_.FullName -Destination $dest -Force
+        }
+    }
 
 # Write a result log into the staging dir (user-writable) so the outcome can be reviewed
 $log = Join-Path $PSScriptRoot 'install.log'
